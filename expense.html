@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker - Smart Budget Planner</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="icon">💰</span>
+                <span class="brand-text">Smart Budget Planner</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="expense.html" class="active">Expense Tracker</a></li>
+                <li><a href="tips.html">Saving Tips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="expense-section">
+        <div class="container">
+            <div class="page-header">
+                <div class="header-icon">💸</div>
+                <h1>Expense Tracker</h1>
+                <p>Track your daily expenses and stay on budget</p>
+            </div>
+            <div class="expense-form-container">
+                <form id="expenseForm" class="expense-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="expenseName">Expense Name</label>
+                            <input type="text" id="expenseName" placeholder="e.g., Groceries" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expenseAmount">Amount (RS)</label>
+                            <input type="number" id="expenseAmount" placeholder="e.g., 500" required min="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="expenseCategory">Category</label>
+                            <select id="expenseCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="Food">🍔 Food</option>
+                                <option value="Transport">🚗 Transport</option>
+                                <option value="Shopping">🛍️ Shopping</option>
+                                <option value="Bills">💡 Bills</option>
+                                <option value="Entertainment">🎮 Entertainment</option>
+                                <option value="Health">⚕️ Health</option>
+                                <option value="Education">📚 Education</option>
+                                <option value="Other">📌 Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="expenseDate">Date</label>
+                            <input type="date" id="expenseDate" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Expense</button>
+                </form>
+            </div>
+            <div class="total-container">
+                <div class="total-card">
+                    <span class="total-label">Total Expenses:</span>
+                    <span class="total-amount" id="totalAmount">RS 0</span>
+                </div>
+            </div>
+            <div class="expense-table-container">
+                <table class="expense-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expenseTableBody">
+                        <tr class="no-data">
+                            <td colspan="5">No expenses added yet. Start tracking!</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>💰 Smart Budget Planner</h3>
+                    <p>Your personal finance companion</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="expense.html">Expense Tracker</a></li>
+                        <li><a href="tips.html">Saving Tips</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <span>📧</span>
+                        <span>📱</span>
+                        <span>🌐</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Smart Budget Planner.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
